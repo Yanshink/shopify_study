@@ -1,0 +1,397 @@
+<body>
+    <div id="shopify-section-header" class="shopify-section">
+        <div class="relative bg-white" x-data="{ mobileMenuOpen: false }">
+            <div class="mx-auto px-4 sm:px-6">
+                <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+                    <!-- STORE NAME / STORE LOGO -->
+                    <div class="flex justify-start lg:flex-1 truncate">
+                        <h1 class="text-xl font-bold truncate">Yanshyn Development Online Store Test</h1>
+                    </div>
+
+                    <div class="-mr-2 -my-2 ml-3 md:hidden">
+                        <button type="button"
+                            class="bg-white p-2 inline-flex items-center justify-center focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+
+                        </button>
+                    </div>
+
+                    <!-- NAVIGATION MENU -->
+                    <nav x-data="{ open: false }" class="hidden md:flex space-x-10">
+
+
+                        <div class="relative">
+                            <button x-on:click="open = ! open" type="button"
+                                class="inline-flex items-center text-base text-gray-500 hover:text-gray-900">
+                                Home
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="ml-1 pt-1 w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+
+                            </button>
+                            <div x-show="open" @click.away="open = false"
+                                class="absolute z-10 -ml-5 mt-5 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                                <div class="shadow-lg border ring-black ring-opacity-5 overflow-hidden    rounded-lg">
+                                    <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                                        <!-- CREATE THE SUBLINK -->
+
+
+                                        <a href="/collections/all"
+                                            class="-m-3 p-3 flex items start rounded-lg hover:bg-gray-100">
+                                            <div class="ml-4">
+                                                <p class="text-gray-900 text-base font-medium">
+                                                    Example
+                                                </p>
+                                            </div>
+                                        </a>
+
+
+
+                                    </div>
+                                </div>
+
+                                <!-- MOBILE MENU CONTAINER -->
+                                <div class="absolute z-10 top-0 inset-x-0 p-2 transform origin-top-left md:hidden">
+                                    <div class="shadow-lg rounded-lg ring-1 ring-black ring-opacity-5 bg-white w-full">
+                                        <div class="p-5 divide-y-2 divide-gray-50">
+
+                                            <!-- MOBILE MENU HEADER TITLE PLUS CLOSE BUTTON -->
+                                            <div class="flex items-center justify-between pb-3">
+                                                <div>
+                                                    <h1 class="text-lg text-gray-500">MENU</h1>
+                                                </div>
+                                                <div class="-mr-2">
+                                                    <button type="button" class="bg-white rounded-md p-2 text-gray-500">
+                                                        CLOSE
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <!-- NAVIGATION LINKS FOR MOBILE MENU -->
+                                            <div class="pt-3">
+                                                <nav class="grid gap-y-7">
+
+                                                    <a href="#"
+                                                        class="-m-3 p-3 flex items-center rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-50">
+                                                        LINK ITEM
+                                                    </a>
+
+                                                    <a href="#"
+                                                        class="-m-3 p-3 flex items-center rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-50">
+                                                        LINK ITEM
+                                                    </a>
+
+                                                    <div class="relative">
+                                                        <button type="button"
+                                                            class="text-base text-gray-500 hover:text-gray-900 flex items-center justify-between w-full">
+                                                            <div>LINK ITEM</div>
+                                                        </button>
+
+                                                        <div class="grid gap-y-7 py-3">
+                                                            <a href="#"
+                                                                class="-m-3 p-3 mt-2 flex items-center rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-50">
+                                                                <span
+                                                                    class="ml-3 text-base font-medium text-gray-500">CHILDLINK
+                                                                    ITEM</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+                        <div class="relative">
+                            <a href="/collections/all" class="text-base text-gray-500 hover:text-gray-900">Catalog</a>
+                        </div>
+
+
+
+                        <div class="relative">
+                            <a href="/pages/contact" class="text-base text-gray-500 hover:text-gray-900">Contact</a>
+                        </div>
+
+
+                    </nav>
+
+                    <div class="hidden md:flex items-center justify-end md:flex-1 space-x-5">
+                        <a href="/cart" class="whitespace-nowrap text-base text-gray-500 hover:text-gray-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                            </svg>
+                        </a>
+
+                        <a href="/account/login" class="text-base text-gray-500 hover:text-gray-900">Login</a>
+                        <a href="/account/register" class="text-base text-gray-500 hover:text-gray-900">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main role="main">
+
+    </main>
+    <noscript>
+        <style type="text/css">
+            .shopify-cli-no-script-message {
+                font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+                text-size-adjust: 100%;
+                text-rendering: optimizeLegibility;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                position: fixed;
+                z-index: 999;
+                font-weight: 500;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+                padding: 10rem 0;
+                color: #202223;
+                text-align: center;
+                background-color: #F6F6F7;
+            }
+        </style>
+        <div class="shopify-cli-no-script-message">
+            Shopify CLI requires JavaScript to work.
+            <br />
+            Activate JavaScript support or try a different browser.
+        </div>
+    </noscript>
+    <script>
+        (() => {
+            (() => {
+                window.__SHOPIFY_CLI_ENV__ = {
+                    "mode": "hot-reload",
+                    "section_names_by_type": {}
+                };
+            })();
+
+            class HotReload {
+                static reloadMode = () => {
+                    const namespace = window.__SHOPIFY_CLI_ENV__;
+                    return namespace.mode;
+                };
+                static isFullPageReloadMode = () => {
+                    return HotReload.reloadMode() === "full-page";
+                };
+                static isReloadModeActive = () => {
+                    return HotReload.reloadMode() !== "off";
+                };
+                static setHotReloadCookie = (files) => {
+                    const date = new Date();
+
+                    // Hot reload cookie expires in 3 seconds
+                    date.setSeconds(date.getSeconds() + 3);
+
+                    const sections = files.join(",");
+                    const expires = date.toUTCString();
+
+                    document.cookie = `hot_reload_files=${sections}; expires=${expires}; path=/`;
+                };
+                static refreshPage = (files) => {
+                    HotReload.setHotReloadCookie(files);
+                    console.log("[HotReload] Refreshing entire page");
+                    window.location.reload();
+                };
+                static isCSSFile = (filename) => {
+                    return filename.endsWith(".css");
+                };
+                static reloadCssFile = (filename) => {
+                    // Find a stylesheet link starting with /assets (locally-served only) containing the filename
+                    let links = document.querySelectorAll(
+                        `link[href^="/assets"][href*="${filename}"][rel="stylesheet"]`
+                    );
+
+                    Array.from(links).forEach((link) => {
+                        if (!link) {
+                            console.log(
+                                `[HotReload] Could not find link for stylesheet ${filename}`
+                            );
+                        } else {
+                            link.href = new URL(link.href).pathname + `?v=${Date.now()}`;
+                            console.log(`[HotReload] Reloaded stylesheet ${filename}`);
+                        }
+                    });
+                };
+            }
+
+            class SSEClient {
+                constructor(eventsUrl, eventHandler) {
+                    SSEClient.verifySSE();
+                    this.eventsUrl = eventsUrl;
+                    this.eventHandler = eventHandler;
+                }
+                static verifySSE() {
+                    if (typeof EventSource === "undefined") {
+                        console.error(
+                            "[HotReload] Error: SSE features are not supported. Try a different browser."
+                        );
+                    }
+
+                    console.log("[HotReload] Initializing...");
+                }
+                connect() {
+                    const eventSource = new EventSource(this.eventsUrl);
+                    eventSource.onmessage = (msg) => {
+                        this.handleMessage(msg);
+                    };
+
+                    eventSource.onopen = () => console.log("[HotReload] SSE connected.");
+
+                    eventSource.onclose = () => {
+                        console.log("[HotReload] SSE closed. Attempting to reconnect...");
+
+                        setTimeout(this.connect, 5000);
+                    };
+
+                    eventSource.onerror = () => {
+                        console.log("[HotReload] SSE closed.");
+                        eventSource.close();
+                    };
+                }
+                handleMessage(message) {
+                    const data = JSON.parse(message.data);
+                    if (data.reload_page) {
+                        HotReload.refreshPage([]);
+                        return;
+                    }
+                    this.eventHandler(data);
+                }
+            }
+
+            (() => {
+                function sectionNamesByType(type) {
+                    const namespace = window.__SHOPIFY_CLI_ENV__;
+                    return namespace.section_names_by_type[type] || [];
+                }
+
+                function querySelectDOMSections(idSuffix) {
+                    const elements = document.querySelectorAll(
+                        `[id^='shopify-section'][id$='${idSuffix}']`
+                    );
+                    return Array.from(elements);
+                }
+
+                function fetchDOMSections(name) {
+                    const domSections = sectionNamesByType(name).flatMap((n) =>
+                        querySelectDOMSections(n)
+                    );
+
+                    if (domSections.length > 0) {
+                        return domSections;
+                    }
+
+                    return querySelectDOMSections(name);
+                }
+
+                function isRefreshRequired(files) {
+                    if (HotReload.isFullPageReloadMode()) {
+                        return true;
+                    }
+                    return files.some(
+                        (file) => !HotReload.isCSSFile(file) && !isSectionFile(file)
+                    );
+                }
+
+                function refreshFile(file) {
+                    if (HotReload.isCSSFile(file)) {
+                        HotReload.reloadCssFile(file);
+                        return;
+                    }
+
+                    if (isSectionFile(file)) {
+                        reloadSection(file);
+                    }
+                }
+
+                function handleUpdate(data) {
+                    const modifiedFiles = data.modified;
+
+                    if (modifiedFiles === undefined) {
+                        return;
+                    }
+
+                    if (isRefreshRequired(modifiedFiles)) {
+                        HotReload.refreshPage(modifiedFiles);
+                    } else {
+                        modifiedFiles.forEach(refreshFile);
+                    }
+                }
+
+                function isSectionFile(filename) {
+                    return new Section(filename).valid();
+                }
+
+                function reloadSection(filename) {
+                    new Section(filename).refresh();
+                }
+
+                class Section {
+                    constructor(filename) {
+                        this.filename = filename;
+                        this.name = filename.split("/").pop().replace(".liquid", "");
+                        this.elements = fetchDOMSections(this.name);
+                    }
+
+                    valid() {
+                        return this.filename.startsWith("sections/") && this.elements.length > 0;
+                    }
+
+                    async refreshElement(element) {
+                        const sectionId = element.id.replace(/^shopify-section-/, "");
+                        const url = new URL(window.location.href);
+
+                        url.searchParams.append("section_id", sectionId);
+
+                        const response = await fetch(url);
+
+                        try {
+                            if (response.headers.get("x-templates-from-params") === "1") {
+                                element.outerHTML = await response.text();
+                            } else {
+                                window.location.reload();
+
+                                console.log(
+                                    `[HotReload] Hot-reloading not supported, fully reloading ${this.name} section`
+                                );
+                            }
+                        } catch (e) {
+                            console.log(
+                                `[HotReload] Failed to reload ${this.name} section: ${e.message}`
+                            );
+                        }
+                    }
+
+                    async refresh() {
+                        console.log(`[HotReload] Reloaded ${this.name} sections`);
+                        this.elements.forEach(this.refreshElement);
+                    }
+                }
+
+                if (HotReload.isReloadModeActive()) {
+                    let client = new SSEClient("/hot-reload", handleUpdate);
+                    client.connect();
+                }
+            })();
+
+        })();
+    </script>
+</body>
